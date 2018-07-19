@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .page-name {
@@ -17,10 +17,17 @@ body {
 }
 
 img {
-  max-width: 40%;
+  padding-top: 5%;
+  width: 40%;
+  height: 40%;
   margin: auto;
 }
 
 #littleContainer{
+  display: flex;
   width: 100%;
+}
+
+#counter {
+  margin:auto;
 }
