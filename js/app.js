@@ -1,4 +1,4 @@
-function () {
-  const canvas = document.getElementById("theCanvas");
-  const ctx = canvas.getContext("2d");
-}
+let count = 0;
+let catImage = document.querySelector('img');
+let clickCounter = document.getElementById('counter');
+clickCounter.innerHTML = count
