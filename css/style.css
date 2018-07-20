@@ -1,6 +1,7 @@
 body {
   height: auto;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +10,7 @@ body {
   /* justify-content: center; */
 }
 
-/* .page-name {
+.page-name {
   font-family: 'Raleway', sans-serif;
 
   max-width: 90%;
@@ -17,23 +18,27 @@ body {
   height: 10%;
   font-size: 50px;
   margin: auto;
-} */
+}
 
 .animal-card {
   margin-top: 10%;
-  max-width: 50%;
+  max-width: 40%;
   height: 20%;
   margin: auto;
   border: solid;
   border-color: #34AF23;
-  flex-shrink: 2;
+  display: inline-block;
   text-align: center;
 }
 
 img {
   max-width: 100%;
+  cursor: pointer;
 }
 
+span {
+  margin-left: 10%;
+}
 /* #littleContainer{
   display: flex;
   width: 100%;
