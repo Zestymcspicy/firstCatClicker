@@ -5,10 +5,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
+  max-height: 900px;
   /* justify-content: center; */
 }
 
-.page-name {
+/* .page-name {
   font-family: 'Raleway', sans-serif;
 
   max-width: 90%;
@@ -16,26 +17,32 @@ body {
   height: 10%;
   font-size: 50px;
   margin: auto;
-}
+} */
 
 .animal-card {
   margin-top: 10%;
-  width: 1fr;
-  height: 40%;
+  max-width: 50%;
+  height: 20%;
   margin: auto;
   border: solid;
   border-color: #34AF23;
+  flex-shrink: 2;
+  text-align: center;
 }
 
-#littleContainer{
+img {
+  max-width: 100%;
+}
+
+/* #littleContainer{
   display: flex;
   width: 100%;
   margin-bottom: 15px;
-}
+} */
 
-#counter {
+/* #counter {
   margin:auto;
   max-width: 10%;
   font-size: 35px;
   padding-top: 6%;
-}
+}*/
