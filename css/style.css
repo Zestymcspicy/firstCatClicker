@@ -9,7 +9,8 @@ body {
 }
 
 .page-name {
-  max-width: 100%;
+  font-family: 'Raleway', sans-serif;
+  max-width: 90%;
   color:  blue;
   height: 10%;
   font-size: 50px;
@@ -17,17 +18,23 @@ body {
 }
 
 img {
-  padding-top: 5%;
+  margin-top: 10%;
   width: 40%;
   height: 40%;
   margin: auto;
+  border: solid;
+  border-color: #34AF23;
 }
 
 #littleContainer{
   display: flex;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 #counter {
   margin:auto;
+  max-width: 10%;
+  font-size: 35px;
+  padding-top: 6%;
 }
