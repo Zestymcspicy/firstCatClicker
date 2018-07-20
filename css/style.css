@@ -10,6 +10,7 @@ body {
 
 .page-name {
   font-family: 'Raleway', sans-serif;
+
   max-width: 90%;
   color:  blue;
   height: 10%;
@@ -17,9 +18,9 @@ body {
   margin: auto;
 }
 
-img {
+.animal-card {
   margin-top: 10%;
-  width: 40%;
+  width: 1fr;
   height: 40%;
   margin: auto;
   border: solid;
