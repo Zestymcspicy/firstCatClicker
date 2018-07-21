@@ -1,5 +1,4 @@
 let imageArray = [];
-let builtArray= [];
 
 class AnimalImage {
   constructor(name, imageLocation) {
@@ -14,44 +13,38 @@ class AnimalImage {
     animal.ownDiv = document.createElement("div");
     animal.nameText = document.createTextNode(`${animal.name}`);
     animal.image = document.createElement("img");
-    animal.image.src=`${animal.imageLocation}`;
+    animal.listEntry = document.createElement("li");
+    animal.listEntry.innerHTML = animal.name;
+    animal.listEntry.id=animal.name;
+    animal.image.src=animal.imageLocation;
     animal.ownDiv.appendChild(animal.nameText);
     animal.ownDiv.appendChild(animal.countSpan);
     animal.ownDiv.appendChild(animal.image);
-    mainContainer.appendChild(animal.ownDiv);
     animal.ownDiv.classList.add('animal-card');
-    builtArray.push(animal.ownDiv);
-    animal.image.addEventListener('click', function (){
-    animal.clickCount++;
-    animal.countSpan.innerHTML = (`${animal.clickCount}`);
-  });
-
-  }
+  };
 };
 
+const catList = document.createElement("ul");
 const mainContainer = document.getElementById("mainContent");
 const larry = new AnimalImage("Larry Shonsleberry", "images/IMG_1278.png");
 const chewie = new AnimalImage("Chewbacca", "images/chewie.png");
 const twoKitties = new AnimalImage("Cuddling Kittens", "images/twoKitties.png");
 
-// function buildImage (animal) {
-//   let countSpan = document.createElement("span");
-//   let newDiv = document.createElement("div");
-//   let newText = document.createTextNode(`${animal.name}`);
-//   let newImage = document.createElement("img");
-//   newImage.src=`${animal.imageLocation}`;
-//   newDiv.appendChild(newText);
-//   newDiv.appendChild(countSpan);
-//   newDiv.appendChild(newImage);
-//   mainContainer.appendChild(newDiv);
-//   newDiv.classList.add('animal-card');
-//   builtArray.push(newDiv);
-//   newImage.addEventListener('click', function (){
-//     animal.clickCount++;
-//     countSpan.innerHTML = (`${animal.clickCount}`);
-//   });
-// };
+mainContainer.appendChild(catList);
+// animal.image.addEventListener('click', function (){
+//   animal.clickCount++;
+//   animal.countSpan.innerHTML = (`${animal.clickCount}`);
 
 imageArray.forEach(function (element){
   element.buildImage();
+  catList.appendChild(element.listEntry);
+});
+
+catList.addEventListener("click", function (e){
+  let target =  imageArray.forEach(function(obj) {
+    if (e.id === obj.name){
+      return obj;
+    }
+  });
+  mainContainer.appendChild(target.ownDiv);
 });
